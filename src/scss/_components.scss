@@ -1,0 +1,9 @@
+.link {
+	position: relative;
+	color: $teal;
+	font-size: 0.9375rem;
+}
+input.is-danger {
+	background: $lightRed !important;
+	border-color: $red !important;
+}
