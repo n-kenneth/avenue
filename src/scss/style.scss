@@ -34,6 +34,10 @@ a:hover {
 	background: $teal;
 	color: #fff;
 }
+input[type="checkbox"] {
+	display: none;
+}
+
 body {
 	font-family: $montserrat;
 }
@@ -193,7 +197,9 @@ body {
 		font-size: 1.125rem;
 		font-weight: bold;
 	}
-	input {
+	input[type="password"],
+	input[type="email"],
+	input[type="text"] {
 		width: 100%;
 		border: 1px solid #e7e7e7;
 		padding: 10px;

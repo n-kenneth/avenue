@@ -33,6 +33,18 @@ a:hover {
 :-moz-placeholder {
   color: #989898; }
 
+::-moz-selection {
+  background: #00c8c8;
+  color: #fff; }
+
+::selection {
+  background: #00c8c8;
+  color: #fff; }
+
+::-moz-selection {
+  background: #00c8c8;
+  color: #fff; }
+
 body {
   font-family: "Montserrat", sans-serif; }
 
@@ -191,7 +203,9 @@ body {
   font-size: 1.125rem;
   font-weight: bold; }
 
-.form-area input {
+.form-area input[type="password"],
+.form-area input[type="email"],
+.form-area input[type="text"] {
   width: 100%;
   border: 1px solid #e7e7e7;
   padding: 10px;
