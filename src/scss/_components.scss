@@ -1,3 +1,36 @@
+ul,li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a:hover {
+	color: $teal;
+	text-decoration: none;
+}
+::-webkit-input-placeholder { 
+  color: $lightGray;
+}
+::-moz-placeholder { 
+  color: $lightGray;
+}
+:-ms-input-placeholder { 
+  color: $lightGray;
+}
+:-moz-placeholder { 
+  color: $lightGray;
+}
+::selection {
+	background: $teal;
+	color: #fff;
+}
+::-moz-selection {
+	background: $teal;
+	color: #fff;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
 .link {
 	position: relative;
 	color: $teal;
@@ -6,4 +39,27 @@
 input.is-danger {
 	background: $lightRed !important;
 	border-color: $red !important;
+}
+label.checkbox {
+	position: relative;
+	padding-left: 40px;
+	font-family: $roboto;
+	font-size: 0.9375rem;
+	color: #8e8c8c;
+}
+label.checkbox:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	background: url(../images/checkbox.png) center top no-repeat;
+	transform: translateY(-50%);
+	cursor: pointer
+}
+
+input[type="checkbox"]:checked ~ label:before {
+	background-position: center bottom;
 }

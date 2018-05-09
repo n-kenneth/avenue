@@ -10,17 +10,15 @@ const notify = require('gulp-notify');
 
 gulp.task('sass', () => {
   return gulp.src('./src/scss/**/*.scss')
+  .pipe(plumber({ errorHandler: function(err) {
+            notify.onError({
+                title: "Gulp error in " + err.plugin,
+                message:  err.toString()
+            })(err);
+        }}))
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('./src/css/'))
-    .pipe(plumber({
-      errorHandler(err) {
-        notify.onError({
-          title: 'Gulp error in ' + err.plugin,
-          message: err.toString()
-        })(err);
-      }
-    }))
     .pipe(browserSync.stream());
 });
 
