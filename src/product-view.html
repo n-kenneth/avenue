@@ -49,47 +49,100 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2><span>WELCOME</span> TO AVE</h2>
-        <p>SIGN IN OR REGISTER</p>
+        <h2><span>PRODUCT</span> VIEW</h2>
+        <p>mens - casuals - hoodies & sweatshirts - <span class="highlight">ave classic sweatshirt</span></p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="form-area">
-  <div class="container">
+<section class="product-area">
+  <div class="container product-showcase">
     <div class="row">
-      <div class="col-md-5 signin">
-        <h3>SIGN IN</h3>
-        <form>
-            <input type="email" placeholder="Your Email..">
-            <input type="password" placeholder="Your password">
-          <div class="form-group">
-            <button class="btn btn-primary">SIGN IN</button>
-            <a href="#" class="link link-arrow">Forgot your Password <i class="fas fa-long-arrow-alt-right"></i></a>
-          </div>
-        </form>
+      <div class="col-md-6">
+        <ul class="product-slider">
+          <li><img src="images/product-mens.jpg" alt="" class="product-zoom" data-zoom-image="images/product-mens-lg.jpg"></li>
+          <li><img src="images/product-mens.jpg" alt="" class="product-zoom" data-zoom-image="images/product-mens-lg.jpg"></li>
+          <li><img src="images/product-mens.jpg" alt="" class="product-zoom" data-zoom-image="images/product-mens-lg.jpg"></li>
+          <li><img src="images/product-mens.jpg" alt="" class="product-zoom" data-zoom-image="images/product-mens-lg.jpg"></li>
+        </ul>
       </div>
-      <div class="col-md-7 register">
-        <h3>REGISTER</h3>
-        <form>
-          <input type="email" placeholder="Your Email..">
-          <input type="password" placeholder="Your Password..">
-          <input type="password" placeholder="Confirm Password..">
+      <div class="col-md-6 product-details">
+        <h3>Ave classic sweatshirt</h3>
+        <ul class="review-information">
+          <li class="review-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star empty"></i>
+            <span class="review-number">3 Review(s)</span>
+          </li>
+          <li class="add-review"><a href="#" class="link">Add a Review</a></li>
+          <li class="share-product">
+            <span>Share: </span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="far fa-envelope"></i></a>
+          </li>
+        </ul>
+        <div class="product-price">
+          <div class="sale price">
+            <span>107</span>
+          </div>
+          <div class="price">
+            <span>89.99</span>
+          </div>
+        </div>
+        <ul class="product-info01">
+          <li>
+            <span>AVAILABILITY: </span>In stock
+          </li>
+          <li>
+            <span>PRODUCT CODE: </span>#499577
+          </li>
+          <li>
+            <span>TAGS: </span>
+            <a href="#">Classic</a>
+            <a href="#">Casual</a>
+            <a href="#">V-neck</a>
+            <a href="#">Loose</a>
+          </li>
+        </ul>
+        <p>Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh suspendisse est congue metus nunc, id viverra elit loreti rhoncus quis consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.</p>
+        <ul class="list product-info02">
+          <li>Elasticated cuffs</li>
+          <li>Casual fit</li>
+          <li>100% Cotton</li>
+          <li>Free shipping with 4 days delivery</li>
+        </ul>
+        <div class="options">
           <div class="form-group">
-            <input type="checkbox" id="agree">
-            <label for="agree" class="checkbox">Sign up for exclusive updates, discounts, new arrivals, contests, and more!</label>
+            <label for="colour">COLOUR</label>
+            <select name="" id="colour">
+              <option value="" disabled selected>Select Colour</option>
+            </select>
           </div>
-          <div class="form-group confirm-account">
-            <button class="btn btn-outline">CREATE ACCOUNT</button>
-            <p>By clicking ‘Create Account’, you <br>agree to our <a href="#" class="link link-arrow">Privacy Policy <i class="fas fa-long-arrow-alt-right"></i></a></p>
+          <div class="form-group">
+            <label for="colour">SIZE</label>
+            <select name="" id="size">
+              <option value="" disabled selected>Select Size</option>
+            </select>
           </div>
-        </form>
+          <div class="form-group">
+            <label for="colour">QTY</label>
+            <select name="" id="qty">
+              <option value="1">1</option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <footer>
   <div class="container footer-links">
@@ -169,5 +222,7 @@
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/slick.js"></script>
+<script src="js/jquery.elevatezoom.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

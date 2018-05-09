@@ -1,39 +1,34 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const browserSync = require('browser-sync').create();
-const useref = require('gulp-useref');
-const uglify = require('gulp-uglify');
-const gulpIf = require('gulp-if');
-const plumber = require('gulp-plumber');
-const autoprefixer = require('gulp-autoprefixer');
-const notify = require('gulp-notify');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
+var notify = require('gulp-notify');
+var plumber = require('gulp-plumber');
 
-gulp.task('sass', () => {
+gulp.task('sass', function(){
   return gulp.src('./src/scss/**/*.scss')
-  .pipe(plumber({ errorHandler: function(err) {
+        .pipe(plumber({
+          errorHandler: function(err){
             notify.onError({
-                title: "Gulp error in " + err.plugin,
-                message:  err.toString()
+              title: "Gulp Error in " + err.plugin,
+              message: err.toString()
             })(err);
-        }}))
-    .pipe(sass())
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('./src/css/'))
-    .pipe(browserSync.stream());
+                this.emit('end');
+          }}))
+        .pipe(sass())
+        .pipe(gulp.dest('./src/css/'))
+        .pipe(browserSync.stream());
 });
 
-gulp.task('serve', ['sass'], () => {
-
+gulp.task('browserSync', function(){
   browserSync.init({
     server: {
-      baseDir: './src'
-    },
+      baseDir: './src/'
+    }
   });
-
-  gulp.watch( './src/scss/**/*.scss', ['sass'] );
-  gulp.watch('./src/**/*.html', browserSync.reload);
-  gulp.watch('./src/**/*.js', browserSync.reload);
-
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['browserSync', 'sass'], function(){
+  gulp.watch('./src/scss/**/*.scss', ['sass']);
+  gulp.watch('./src/**/*.html', browserSync.reload);
+  gulp.watch('./src/js/**/*.js', browserSync.reload);
+});

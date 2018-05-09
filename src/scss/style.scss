@@ -310,3 +310,124 @@ footer {
 		}
 	}
 }
+
+/****************************
+	Product View
+****************************/
+// Product Slider
+.zoomContainer,
+	.product-zoom {
+		z-index: 0;
+		pointer-events: none;
+	}
+.product-slider {
+	.slick-current, .slick-active {
+		img {
+			pointer-events: auto;
+		}
+	}
+	.slick-arrow {
+		position: absolute;
+		display: inline-block;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 4px 13px;
+		z-index: 1;
+		color: $mediumGray;
+		font-size: 2rem;
+		&.slick-next {
+			right: 0;
+		}
+		&.slick-prev {
+			left: 0;
+		}
+		&:hover {
+			color: #fff;
+			background: $teal;
+		}
+	}
+}
+
+.product-details {
+	font-size: 0.875rem;
+	a {
+		font-size: 0.875rem;
+	}
+	h3 {
+		margin-bottom: 20px;
+		color: $mediumGray;
+		font-size: 1.125rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.review-information {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 15px;
+		.add-review {
+			display: flex;
+			justify-content: center;
+		}
+		.review-rating {
+			i {
+				letter-spacing: -2px;
+			}
+			span {
+				margin-left: 10px;
+				display: inline-block;
+				color: $gray;
+				font-weight: bold;
+			}
+		}
+	}
+	.share-product {
+		display: flex;
+		flex-direction: flex-start;
+		span {
+			margin: 0 10px;
+			font-weight: bold;
+			color: #8c8c8c;
+		}
+		a {
+			font-size: 0.875rem;
+			color: #8c8c8c;
+			font-weight: bold;
+			margin-right: 15px;
+		}
+	}
+
+	.product-info01 {
+		margin-bottom: 30px;
+		li {
+			font-size: 0.8125rem;
+			font-family: $roboto;
+			color: #8c8c8c;
+			margin-bottom: 5px;
+		}
+		span {
+			display: inline-block;
+			margin-right: 5px;
+			font-size: 0.9375rem;
+			font-family: $montserrat;
+			color: $mediumGray;
+			font-weight: bold;
+		}
+		a {
+			color: $teal;
+			&::after {
+				content: ',';
+			}
+			&:last-child::after {
+				content: none;
+			}
+		}
+	}
+	p {
+		text-align: justify;
+		font-family: $roboto;
+		line-height: 1.2;
+		color: #8e8c8c;
+		font-size: 0.9375rem;
+	}
+}
