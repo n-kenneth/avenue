@@ -28,6 +28,19 @@ a:hover {
   background: #00c8c8;
   color: #fff; }
 
+select {
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  border: 1px solid #e7e7e7;
+  color: #989898;
+  -moz-appearance: window;
+  -webkit-appearance: none;
+  outline: 0;
+  background: url(../images/arrow-down.png) calc(100% - 10px) center no-repeat; }
+  select::-ms-expand {
+    display: none; }
+
 .highlight {
   color: #00c8c8; }
 
@@ -61,6 +74,18 @@ label.checkbox:before {
   background: url(../images/checkbox.png) center top no-repeat;
   transform: translateY(-50%);
   cursor: pointer; }
+
+.btn-outline {
+  display: inline-block;
+  border: 2px solid #727272;
+  color: #727272;
+  padding: 15px 40px;
+  transition: all .3s ease-in; }
+  .btn-outline i {
+    margin-right: 10px; }
+  .btn-outline:hover {
+    background: #727272;
+    color: #fff; }
 
 input[type="checkbox"]:checked ~ label:before {
   background-position: center bottom; }
@@ -159,14 +184,11 @@ body {
           position: relative;
           right: 20px; }
     .top-nav .container select {
+      width: auto;
+      padding: 0;
       border: 0;
       background: none;
-      color: #999;
-      -moz-appearance: window;
-      -webkit-appearance: none;
-      outline: 0; }
-      .top-nav .container select::-ms-expand {
-        display: none; }
+      color: #999; }
 
 .main-nav {
   padding: 37px 0;
@@ -459,3 +481,37 @@ footer {
     line-height: 1.2;
     color: #8e8c8c;
     font-size: 0.9375rem; }
+  .product-details .product-info02 {
+    margin-bottom: 30px; }
+  .product-details .options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; }
+    .product-details .options .form-group {
+      flex: 3;
+      padding: 0 15px; }
+      .product-details .options .form-group label {
+        color: #575153;
+        font-size: 0.8125rem;
+        font-weight: bold; }
+    .product-details .options .form-group:first-child {
+      padding-left: 0; }
+    .product-details .options .form-group:last-child {
+      flex: 1; }
+  .product-details .product-actions {
+    margin-bottom: 20px; }
+    .product-details .product-actions a:first-child {
+      margin-right: 20px; }
+  .product-details a.compare-link {
+    display: inline-block;
+    color: #454647;
+    font-weight: bold;
+    font-size: 0.875rem; }
+    .product-details a.compare-link i {
+      display: inline-block;
+      color: #fff;
+      background: #727272;
+      padding: 8px;
+      border-radius: 50%;
+      font-size: 0.9375rem;
+      margin-right: 10px; }

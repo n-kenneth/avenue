@@ -48,15 +48,11 @@ body {
 			}
 		}
 		select {
+			width: auto;
+			padding: 0;
 			border: 0;
 			background: none;
 			color: #999;
-			-moz-appearance: window;
-    	-webkit-appearance: none;
-    	outline: 0;
-	    &::-ms-expand {
-	    	display: none;
-	    }
 		}
 	}
 }
@@ -429,5 +425,49 @@ footer {
 		line-height: 1.2;
 		color: #8e8c8c;
 		font-size: 0.9375rem;
+	}
+	.product-info02 {
+		margin-bottom: 30px;
+	}
+	.options {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+		.form-group {
+			flex: 3;
+			padding: 0 15px;
+			label {
+				color: $mediumGray;
+				font-size: 0.8125rem;
+				font-weight: bold;
+			}
+		}
+		.form-group:first-child {
+			padding-left: 0;
+		}
+		.form-group:last-child {
+			flex: 1;
+		}
+	}
+	.product-actions {
+		margin-bottom: 20px;
+		a:first-child {
+			margin-right: 20px;
+		}
+	}
+	a.compare-link {
+		display: inline-block;
+		color: #454647;
+		font-weight: bold;
+		font-size: 0.875rem;
+		i {
+			display: inline-block;
+			color: #fff;
+			background: $gray;
+			padding: 8px;
+			border-radius: 50%;
+			font-size: 0.9375rem;
+			margin-right: 10px;
+		}
 	}
 }

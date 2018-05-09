@@ -27,6 +27,20 @@ a:hover {
 	background: $teal;
 	color: #fff;
 }
+select {
+	width: 100%;
+	padding: 10px;
+	position: relative;
+	border: 1px solid #e7e7e7;
+	color: #989898;
+	-moz-appearance: window;
+	-webkit-appearance: none;
+	outline: 0;
+	background: url(../images/arrow-down.png) calc(100% - 10px) center no-repeat;
+	&::-ms-expand {
+		display: none;
+	}
+}
 .highlight {
 	color: $teal;
 }
@@ -61,7 +75,20 @@ label.checkbox:before {
 	transform: translateY(-50%);
 	cursor: pointer
 }
-
+.btn-outline {
+	display: inline-block;
+	border: 2px solid $gray;
+	color: $gray;
+	padding: 15px 40px;
+	transition: all .3s ease-in;
+	i {
+		margin-right: 10px;
+	}
+	&:hover {
+		background: $gray;
+		color: #fff;
+	}
+}
 input[type="checkbox"]:checked ~ label:before {
 	background-position: center bottom;
 }
