@@ -343,7 +343,9 @@ footer {
 		}
 	}
 }
-
+.product-showcase {
+	margin-bottom: 26px;
+}
 .product-details {
 	font-size: 0.875rem;
 	a {
@@ -468,6 +470,37 @@ footer {
 			border-radius: 50%;
 			font-size: 0.9375rem;
 			margin-right: 10px;
+		}
+	}
+}
+.product-data {
+	.tabs {
+		display: flex;
+		background: #f8f8f8;
+		margin-bottom: 20px;
+		a {
+			display: block;
+			padding: 10px 35px;
+			color: $mediumGray;
+			font-weight: bold;
+		}
+		.active a {
+			background: $bgDark;
+			color: #fff;
+		}
+	}
+	.tab-contents {
+		padding: 0 15px;
+		#description {
+			.desc-header {
+				font-weight: bold;
+				color: $gray;
+				font-size: 0.9375rem;
+			}
+			p {
+				font-size: 0.8125rem;
+				font-family: $roboto;
+			}
 		}
 	}
 }
