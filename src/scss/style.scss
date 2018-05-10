@@ -504,3 +504,43 @@ footer {
 		}
 	}
 }
+
+.stores-area {
+	overflow: hidden;
+	.btn-outline:hover {
+		color: #fff;
+		background-color: $teal;
+		border-color: $teal;
+	}
+	h3 {
+		color: $mediumGray;
+		font-size: 1.125rem;
+		font-weight: bold;
+	}
+	p.lead {
+		color: $gray;
+		font-size: 0.8125rem;
+	}
+	p {
+		color: #8e8c8c;
+		font-size: 0.9375rem;
+		&:last-of-type {
+			margin-bottom: 25px;
+		}
+	}
+	#map {
+		height: 500px;
+		width: 65%;
+	}
+	.location {
+		display: flex;
+		background-color: #f8f8f8;
+		.container-fluid {
+			padding: 0;
+		}
+		.store-address {
+			padding: 30px 50px 0 30px;
+			width: 35%;
+		}
+	}
+}

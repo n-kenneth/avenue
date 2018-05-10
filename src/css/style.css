@@ -541,3 +541,33 @@ footer {
   .product-data .tab-contents #description p {
     font-size: 0.8125rem;
     font-family: "Roboto", sans-serif; }
+
+.stores-area {
+  overflow: hidden; }
+  .stores-area .btn-outline:hover {
+    color: #fff;
+    background-color: #00c8c8;
+    border-color: #00c8c8; }
+  .stores-area h3 {
+    color: #575153;
+    font-size: 1.125rem;
+    font-weight: bold; }
+  .stores-area p.lead {
+    color: #727272;
+    font-size: 0.8125rem; }
+  .stores-area p {
+    color: #8e8c8c;
+    font-size: 0.9375rem; }
+    .stores-area p:last-of-type {
+      margin-bottom: 25px; }
+  .stores-area #map {
+    height: 500px;
+    width: 65%; }
+  .stores-area .location {
+    display: flex;
+    background-color: #f8f8f8; }
+    .stores-area .location .container-fluid {
+      padding: 0; }
+    .stores-area .location .store-address {
+      padding: 30px 50px 0 30px;
+      width: 35%; }
