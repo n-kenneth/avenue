@@ -3,7 +3,8 @@ $(function(){
 		$('.product-zoom').elevateZoom({
 			cursor: 'crosshair',
 			borderSize: 1,
-			zoomWindowOffety: 50
+			zoomWindowOffety: 50,
+			zoomWindowOffetx: 30
 		});
 		$('body').css({
 			'overflow-x': 'hidden'

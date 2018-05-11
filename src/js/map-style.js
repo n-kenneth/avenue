@@ -3,6 +3,7 @@ var map;
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 51.515419, lng: -0.141099},
           zoom: 16,
+          disableDefaultUI: true,
           styles:    [
   {
     "elementType": "geometry",

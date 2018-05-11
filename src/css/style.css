@@ -398,7 +398,9 @@ footer {
   z-index: 0;
   pointer-events: none; }
 
-.product-slider .slick-current img, .product-slider .slick-active img {
+.product-slider .slick-current img,
+.product-slider .slick-active img {
+  max-width: 100%;
   pointer-events: auto; }
 
 .product-slider .slick-arrow {
@@ -608,4 +610,5 @@ footer {
           transition: all .3s ease-out; }
           .stores-area .location .store-address .social-block a i:hover {
             background: #00c8c8;
-            color: #fff; }
+            color: #fff;
+            transform: rotate(360deg); }
