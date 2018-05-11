@@ -400,7 +400,6 @@ footer {
 
 .product-slider .slick-current img,
 .product-slider .slick-active img {
-  max-width: 100%;
   pointer-events: auto; }
 
 .product-slider .slick-arrow {
@@ -612,3 +611,46 @@ footer {
             background: #00c8c8;
             color: #fff;
             transform: rotate(360deg); }
+
+/****************************
+	Look Book
+****************************/
+.filter {
+  padding: 45px 0;
+  display: flex;
+  border-top: 1px solid #eee; }
+  .filter li {
+    margin-right: 50px; }
+    .filter li:last-child {
+      margin-right: 0; }
+    .filter li a {
+      color: #727272;
+      font-size: 0.8125rem;
+      font-weight: light;
+      transition: all .3s ease-out; }
+      .filter li a:hover {
+        color: #00c8c8; }
+
+.product-list > div {
+  margin-bottom: 45px; }
+
+.product-list .product-card {
+  position: relative; }
+  .product-list .product-card .lookbook-text {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .product-list .product-card .lookbook-text .head {
+      letter-spacing: -1px;
+      color: #575153;
+      font-size: 2rem;
+      text-transform: uppercase; }
+      .product-list .product-card .lookbook-text .head span {
+        font-weight: bold; }
+    .product-list .product-card .lookbook-text p {
+      margin-bottom: 10px;
+      color: #727272;
+      text-transform: uppercase;
+      font-size: 0.8125rem; }
+    .product-list .product-card .lookbook-text .sub-head {
+      font-weight: bold; }
