@@ -1,13 +1,10 @@
 @import 'variables';
-@import 'components';
+@import 'base';
+@import 'modules';
 
 * {
 	padding: 0;
 	margin: 0;
-}
-
-body {
-	font-family: $montserrat;
 }
 
 /****************************
