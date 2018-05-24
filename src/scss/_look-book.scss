@@ -1,0 +1,116 @@
+/****************************
+	Look Book
+****************************/
+.lookbook-area {
+	.btn-outline {
+		padding: 5px 20px;
+
+		&:hover {
+			color: #fff;
+			background-color: $teal;
+			border-color: $teal;
+		}
+	}
+}
+
+.filter {
+	padding: 45px 0;
+	display: flex;
+	border-top: 1px solid #eee;
+	li {
+		margin-right: 50px;
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			color: $gray;
+			font-size: 0.8125rem;
+			font-weight: light;
+			transition: all .3s ease-out;
+			&:hover {
+				color: $teal;
+			}
+		}
+	}
+}
+
+.product-list {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 45px;
+	& > div {
+		margin-bottom: 45px;
+	}
+	.product-card {
+		position: relative;
+		z-index: 1;
+		.lookbook-text {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 400px;
+			z-index:3;
+			.head {
+				letter-spacing: -1px;
+				color: lighten($mediumGray, 5%);
+				font-size: 1.375rem;
+				text-transform: uppercase;
+				span {
+					font-weight: bold;
+				}
+			}
+			p {
+				margin-bottom: 10px;
+				color: lighten($gray, 5%);
+				text-transform: uppercase;
+				font-size: 0.75rem;
+			}
+			.sub-head {
+				font-weight: bold;
+			}
+		}
+		&-text::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15));
+			z-index: 2;
+		}
+		.promo-text {
+			position: absolute;
+			right: 30px;
+			top: 30%;
+			font-size: 40px;
+			font-weight: bold;
+			color: lighten($teal, 5%);
+			line-height: 1.2;
+		}
+	}
+}
+
+.custom-look {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 70px;
+	.look {
+		position: relative;
+		padding: 0 10px;
+	}
+	&-text {
+		position: absolute;
+		top: 20%;
+		right: 25px;
+		text-align: right;
+		width: 250px;
+		h3 {
+			color: $mediumGray;
+			span {
+				display: block;
+				font-weight: bold;
+			}
+		}
+	}
+}

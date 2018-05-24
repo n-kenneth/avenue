@@ -114,3 +114,28 @@ ul.list {
 		}
 	}
 }
+
+/****************************
+	HERO AREA
+****************************/
+.hero-area {
+	margin-bottom: 60px;
+	padding: 150px 0;
+	background: url(../images/banner.jpg) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+	color: #fff;
+	h2 {
+		margin-bottom: 30px;
+		letter-spacing: 5px;
+		font-size: 3rem;
+		font-weight: normal;
+		span {
+			font-weight: bold;
+		}
+	}
+	p {
+		font-size: 1.875rem;
+	}
+}

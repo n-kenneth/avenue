@@ -16,4 +16,11 @@ $(function(){
 			nextArrow: '<a href="#" class="slick-next slick-arrow"><i class="fas fa-chevron-right"></i></a>'
 		});
 	}
+
+	if ( $('.product-list').length > 0 ) {
+		$('.product-card img').matchHeight({
+			byRow: false
+		})
+	}
+var mixer = mixitup('.product-list');
 });
