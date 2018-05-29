@@ -1,0 +1,43 @@
+.main-banner {
+	margin-top: -130px;
+	margin-bottom: 45px;
+	z-index: 0;
+	.slick-arrow {
+		display: none !important;
+	}
+	.banner {
+		position: relative;
+		height: 95vh;
+		background-size: cover;
+		background-position: left top;
+		background-repeat: no-repeat;
+		transition: all .3s ease;
+		.btn-outline {
+			position: absolute;
+			right: 10%;
+			bottom: 10%;
+		}
+		&-1 {
+			background-image: url(../images/slider-banner.jpg);
+		}
+		&-2 {
+			background-image: url(../images/slider-banner-1.jpg);
+		}
+		&-3 {
+			background-image: url(../images/slider-banner-2.jpg);
+			.btn-outline {
+				right: auto;
+				left: 10%;
+			}
+		}
+	}
+}
+
+.product-area {
+	.product-list  {
+		padding-bottom: 45px;
+		& > div {
+			margin-bottom: 20px;
+		}
+	}
+}
