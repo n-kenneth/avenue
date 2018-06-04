@@ -99,7 +99,19 @@
     <div class="row product-list">
       <div class="mix col-md-3 grid-item latest best-seller" data-myorder="1">
         <div class="product-card">
-          <img src="images/look-prod-01.jpg" alt="" class="img-fluid">
+          <a href="#">
+              <img src="images/look-prod-01.jpg" alt="" class="img-fluid">
+              <span class="product-card-price"><sup>£</sup>89.99</span>
+              <div class="product-card-text">
+                <p class="text-header">Men's casual sweater  <sup>£</sup>89.99</p>
+                <p class="text-desc">Classic casual t-shirt for women on the move.<br>100% cotton.</p>
+                <ul class="action">
+                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                  <li><a href="#"><i class="fas fa-compress"></i></a></li>
+                </ul>
+              </div>
+          </a>
         </div>
       </div>
       <div class="mix col-md-3 grid-item latest best-seller" data-myorder="1">
@@ -238,12 +250,26 @@
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/slick.js"></script>
 <script src="js/masonry.pkgd.min.js"></script>
+<script src="js/scrollreveal.min.js?ver=1.2"></script>
 <script src="js/script.js"></script>
 <script>
-  $('.product-list').masonry({
-    itemSelector: '.mix',
-    percentPosition: true
-  })
+  $(window).on('load', function(){
+    $('.product-list').masonry({
+      itemSelector: '.mix',
+      percentPosition: true
+    });
+    window.sr = ScrollReveal({ reset: false });
+    var options = {
+      origin   : "top",
+       distance : "24px",
+       duration : 800,
+       scale    : 1.05,
+       viewFactor : .5,
+      easing: 'cubic-bezier(.29, .06, .5, .44)'
+    }
+    sr.reveal('.mix', options, 300);
+  });
+
 </script>
 </body>
 </html>

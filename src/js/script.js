@@ -1,5 +1,5 @@
 $(function(){
-	// 
+	//
 	if ( $('.product-zoom').length > 0 ) {
 		$('.product-zoom').elevateZoom({
 			cursor: 'crosshair',
@@ -27,12 +27,12 @@ $(function(){
 		});
 	}
 	// lookbook cards
-	if ( $('.product-list').length > 0 ) {
+	if ( $('.lookbook-area .product-list').length > 0 ) {
 		$('.product-card img').matchHeight({
 			byRow: false
 		})
 	}
 	// initialize filter on lookbook page
-	var mixer = mixitup('.product-list');
+	// var mixer = mixitup('.product-list');
 
 });
