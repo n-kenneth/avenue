@@ -85,10 +85,10 @@
     <div class="row">
       <div class="col-md-12">
         <ul class="filter">
-          <li><a href="javascript: void(0);" data-filter="all">POPULAR</a></li>
-          <li><a href="javascript: void(0);" data-filter=".most-liked">NEW ARRIVALS</a></li>
+          <li><a href="javascript: void(0);" data-filter=".popular">POPULAR</a></li>
+          <li><a href="javascript: void(0);" data-filter=".new-arrivals">NEW ARRIVALS</a></li>
           <li><a href="javascript: void(0);" data-filter=".best-seller">BEST SELLERS</a></li>
-          <li><a href="javascript: void(0);" data-sort="myorder:asc">SPECIAL OFFERS</a></li>
+          <li><a href="javascript: void(0);" data-sort=".special-offer">SPECIAL OFFERS</a></li>
           <li><a href="javascript: void(0);" data-sort="myorder:desc">COMING SOON</a></li>
         </ul>
       </div>
@@ -97,44 +97,35 @@
 
   <div class="container">
     <div class="row product-list">
-      <div class="mix col-md-3 grid-item latest best-seller" data-myorder="1">
+      <div class="mix col-md-3 grid-item popular best-seller">
         <div class="product-card">
           <a href="#">
               <img src="images/look-prod-01.jpg" alt="" class="img-fluid">
               <span class="product-card-price"><sup>£</sup>89.99</span>
-              <div class="product-card-text">
-                <p class="text-header">Men's casual sweater  <sup>£</sup>89.99</p>
-                <p class="text-desc">Classic casual t-shirt for women on the move.<br>100% cotton.</p>
-                <ul class="action">
-                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                  <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                  <li><a href="#"><i class="fas fa-compress"></i></a></li>
-                </ul>
-              </div>
           </a>
         </div>
       </div>
-      <div class="mix col-md-3 grid-item latest best-seller" data-myorder="1">
+      <div class="mix col-md-3 grid-item new-arrivals">
         <div class="product-card">
           <img src="images/look-prod-02.jpg" alt="" class="img-fluid">
         </div>
       </div>
-      <div class="mix col-md-6 grid-item grid-item--lg latest best-seller" data-myorder="1">
+      <div class="mix col-md-6 grid-item grid-item--lg best-seller">
         <div class="product-card">
           <img src="images/look-prod-04-lg.jpg" alt="" class="img-fluid">
         </div>
       </div>
-      <div class="mix col-md-6 grid-item grid-item--lg" data-myorder="1">
+      <div class="mix col-md-6 grid-item grid-item--lg special-offer">
         <div class="product-card">
           <img src="images/look-prod-05-lg.jpg" alt="" class="img-fluid">
         </div>
       </div>
-      <div class="mix col-md-3 grid-item" data-myorder="1">
+      <div class="mix col-md-3 grid-item popular best-seller">
         <div class="product-card">
           <img src="images/look-prod-06.jpg" alt="" class="img-fluid">
         </div>
       </div>
-      <div class="mix col-md-3 grid-item" data-myorder="1">
+      <div class="mix col-md-3 grid-item coming-soon">
         <div class="product-card">
           <img src="images/look-prod-07.jpg" alt="" class="img-fluid">
         </div>
@@ -249,15 +240,32 @@
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/slick.js"></script>
+<script src="js/mixitup.js"></script>
 <script src="js/masonry.pkgd.min.js"></script>
 <script src="js/scrollreveal.min.js?ver=1.2"></script>
 <script src="js/script.js"></script>
 <script>
   $(window).on('load', function(){
-    $('.product-list').masonry({
-      itemSelector: '.mix',
-      percentPosition: true
+    function masonryGrid() {
+      var container = $('.row.product-list');
+      container.masonry({
+        itemSelector: '.mix',
+        isAnimated: true
+      });
+      container.masonry('reloadItems');
+      container.masonry('layout');
+    }
+
+
+    var mixer = mixitup('.product-list', {
+      callbacks: {
+        onMixEnd: function(state) {
+         masonryGrid();
+        }
+    }
     });
+
+    masonryGrid();
     window.sr = ScrollReveal({ reset: false });
     var options = {
       origin   : "top",

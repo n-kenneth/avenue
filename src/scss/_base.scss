@@ -116,6 +116,7 @@ select {
 
 	nav {
 		display: flex;
+		align-items: center;
 		& > ul {
 			display: flex;
 			flex-direction: flex-start;
@@ -124,7 +125,8 @@ select {
 			& > li {
 				margin-left: 30px;
 				position: relative;
-				&:hover .sub-menu{
+				padding: 10px 0;
+				&:hover > .sub-menu{
 					display: flex;
 					opacity: 1;
 					transition-delay: .3s;
@@ -208,11 +210,12 @@ select {
 			padding: 4px 10px;
 			box-sizing: border-box;
 			input {
-				width: 100%;
+				max-width: 100%;
 				background: none;
 				border: 0;
 				outline: 0;
 				font-size: 0.8125rem;
+				padding-right: 17px;
 			}
 			i {
 				position: absolute;

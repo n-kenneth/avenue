@@ -100,7 +100,8 @@ select {
     .main-nav .logo a span {
       font-weight: bold; }
   .main-nav nav {
-    display: flex; }
+    display: flex;
+    align-items: center; }
     .main-nav nav > ul {
       display: flex;
       flex-direction: flex-start;
@@ -108,8 +109,9 @@ select {
       align-items: center; }
       .main-nav nav > ul > li {
         margin-left: 30px;
-        position: relative; }
-        .main-nav nav > ul > li:hover .sub-menu {
+        position: relative;
+        padding: 10px 0; }
+        .main-nav nav > ul > li:hover > .sub-menu {
           display: flex;
           opacity: 1;
           transition-delay: .3s; }
@@ -178,11 +180,12 @@ select {
       padding: 4px 10px;
       box-sizing: border-box; }
       .main-nav nav .search-form input {
-        width: 100%;
+        max-width: 100%;
         background: none;
         border: 0;
         outline: 0;
-        font-size: 0.8125rem; }
+        font-size: 0.8125rem;
+        padding-right: 17px; }
       .main-nav nav .search-form i {
         position: absolute;
         top: 50%;
@@ -796,33 +799,11 @@ ul.list li {
     .product-area .product-list .product-card:hover {
       box-shadow: 0 0px 24px 0 rgba(0, 0, 0, 0.14);
       transform: translateY(-10px); }
-    .product-area .product-list .product-card:hover .product-card-text {
-      transform: translateY(100%); }
     .product-area .product-list .product-card a {
       display: block; }
     .product-area .product-list .product-card-price {
       position: absolute;
       top: 5px;
-      left: 10px; }
-    .product-area .product-list .product-card-text {
-      text-align: center;
-      background: #fff;
-      position: absolute;
-      transform: translateY(-100%);
-      transition: all .3s ease;
-      z-index: 2; }
-      .product-area .product-list .product-card-text .text-header {
-        color: #575153;
-        font-weight: bold;
-        font-size: 13px; }
-      .product-area .product-list .product-card-text .text-desc {
-        color: #727272;
-        font-family: "Roboto", sans-serif;
-        font-size: 15px; }
-      .product-area .product-list .product-card-text::after {
-        content: none; }
-      .product-area .product-list .product-card-text .action {
-        display: flex;
-        justify-content: center; }
-        .product-area .product-list .product-card-text .action:not(:last-child) {
-          margin-right: 10px; }
+      left: 10px;
+      color: #727272;
+      font-weight: bold; }

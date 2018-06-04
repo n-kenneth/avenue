@@ -47,9 +47,6 @@
 				box-shadow: 0 0px 24px 0 rgba(0,0,0,.14);
 				transform: translateY(-10px);
 			}
-			&:hover .product-card-text {
-				transform: translateY(100%);
-			}
 			a {
 				display: block;
 			}
@@ -57,34 +54,8 @@
 				position: absolute;
 				top: 5px;
 				left: 10px;
-			}
-			&-text {
-				text-align: center;
-				background: #fff;
-				position: absolute;
-				transform: translateY(-100%);
-				transition: all .3s ease;
-				z-index: 2;
-				.text-header {
-					color: $mediumGray;
-					font-weight: bold;
-					font-size: 13px;
-				}
-				.text-desc {
-					color:$gray;
-					font-family: $roboto;
-					font-size: 15px;
-				}
-				&::after {
-					content: none;
-				}
-				.action {
-					display: flex;
-					justify-content: center;
-					&:not(:last-child) {
-						margin-right: 10px;
-					}
-				}
+				color: $gray;
+				font-weight: bold;
 			}
 		}
 	}
